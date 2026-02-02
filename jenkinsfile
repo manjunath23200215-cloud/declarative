@@ -1,0 +1,24 @@
+pipeline{
+  agent any
+  stages {
+    stage ('fetching the code from github repository') {
+      steps {
+        git branch: 'main' , url "https://github.com/manjunath23200215-cloud/maven.git"
+	    }
+	stage ('maven build') {
+	 steps {
+	 echo "it is build stage"
+	      }
+	     }
+	 stage ('testing stage') {
+	 steps {
+         echo "it is testing stage"
+              }
+             }
+	 stage ('deploy stage') {
+         steps {
+         echo "it is testing stage"
+              }
+             }
+	    } 
+           }
